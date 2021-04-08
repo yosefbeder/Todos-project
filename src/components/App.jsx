@@ -9,7 +9,44 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tasks: JSON.parse(localStorage.getItem('tasks')) || [],
+      tasks: JSON.parse(localStorage.getItem('tasks')) || [
+        {
+          checked: false,
+          date: '2021-04-08',
+          id: 'bf171321-bb6a-43af-b4f5-2026c8f5cd04',
+          priority: 'med',
+          title: 'Try to get any bug 😉😎',
+        },
+        {
+          checked: false,
+
+          date: '2021-04-08',
+          id: '82f223b6-f7f9-4221-9f3e-2a87d6b11d3c',
+          priority: 'high',
+          title: 'Add the localStorage api',
+        },
+        {
+          id: '65cf412e-3992-404b-b2a4-449846aeed72',
+          checked: false,
+          title: 'Buy coffee ☕',
+          priority: 'high',
+          date: '2021-04-08',
+        },
+        {
+          id: '6c198b42-0a58-4412-b6e6-ef72f2f6ee04',
+          checked: false,
+          title: 'Add the drag&drop api',
+          priority: 'low',
+          date: '2021-04-08',
+        },
+        {
+          id: 'a17c7269-f876-4507-89f3-9c1b7397ffee',
+          checked: false,
+          title: 'Buy bananas 🍌🍌🍌',
+          priority: 'med',
+          date: '2021-04-08',
+        },
+      ],
       dragging: false,
     };
     this.removeChecked = this.removeChecked.bind(this);
@@ -85,6 +122,7 @@ export default class App extends Component {
 
   render() {
     localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
+    console.log(this.state.tasks);
 
     return (
       <div className="app">

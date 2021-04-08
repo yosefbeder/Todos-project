@@ -1,0 +1,185 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _Nav = require('./Nav');
+  var _NavDefault = _parcelHelpers.interopDefault(_Nav);
+  var _Config = require('./Config');
+  var _ConfigDefault = _parcelHelpers.interopDefault(_Config);
+  var _TasksList = require('./TasksList');
+  var _TasksListDefault = _parcelHelpers.interopDefault(_TasksList);
+  var _Form = require('./Form');
+  var _FormDefault = _parcelHelpers.interopDefault(_Form);
+  var _uuid = require('uuid');
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\App.jsx";
+  class App extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        tasks: JSON.parse(localStorage.getItem('tasks')) || [{
+          checked: false,
+          date: '2021-04-08',
+          id: 'bf171321-bb6a-43af-b4f5-2026c8f5cd04',
+          priority: 'med',
+          title: 'Try to get any bug 😉😎'
+        }, {
+          checked: false,
+          date: '2021-04-08',
+          id: '82f223b6-f7f9-4221-9f3e-2a87d6b11d3c',
+          priority: 'high',
+          title: 'Add the localStorage api'
+        }, {
+          id: '65cf412e-3992-404b-b2a4-449846aeed72',
+          checked: false,
+          title: 'Buy coffee ☕',
+          priority: 'high',
+          date: '2021-04-08'
+        }, {
+          id: '6c198b42-0a58-4412-b6e6-ef72f2f6ee04',
+          checked: false,
+          title: 'Add the drag&drop api',
+          priority: 'low',
+          date: '2021-04-08'
+        }, {
+          id: 'a17c7269-f876-4507-89f3-9c1b7397ffee',
+          checked: false,
+          title: 'Buy bananas 🍌🍌🍌',
+          priority: 'med',
+          date: '2021-04-08'
+        }],
+        dragging: false
+      };
+      this.removeChecked = this.removeChecked.bind(this);
+      this.toggleDragging = this.toggleDragging.bind(this);
+      this.toggleCheck = this.toggleCheck.bind(this);
+      this.deleteTask = this.deleteTask.bind(this);
+      this.newTask = this.newTask.bind(this);
+      this.replace = this.replace.bind(this);
+    }
+    removeChecked() {
+      const newTasks = [...this.state.tasks].filter(task => !task.checked);
+      this.setState({
+        tasks: newTasks
+      });
+    }
+    toggleDragging() {
+      const newDragging = this.state.dragging == false ? true : false;
+      this.setState({
+        dragging: newDragging
+      });
+    }
+    toggleCheck(id) {
+      const newTasks = [...this.state.tasks];
+      const taskIndex = newTasks.findIndex(task => task.id == id);
+      newTasks[taskIndex].checked = newTasks[taskIndex].checked == false ? true : false;
+      this.setState({
+        tasks: newTasks
+      });
+    }
+    deleteTask(id) {
+      const newTasks = [...this.state.tasks];
+      const taskIndex = newTasks.findIndex(task => task.id == id);
+      newTasks.splice(taskIndex, 1);
+      this.setState({
+        tasks: newTasks
+      });
+    }
+    newTask(priority, title, date) {
+      const newTasks = [...this.state.tasks];
+      newTasks.push({
+        id: _uuid.v4(),
+        checked: false,
+        title,
+        priority,
+        date
+      });
+      this.setState({
+        tasks: newTasks
+      });
+    }
+    replace(id1, id2) {
+      const newTasks = [...this.state.tasks];
+      const firstIndex = newTasks.findIndex(task => task.id == id1);
+      const secondIndex = newTasks.findIndex(task => task.id == id2);
+      const firstTask = newTasks[firstIndex];
+      const secondTask = newTasks[secondIndex];
+      console.log(firstTask, secondTask);
+      newTasks[firstIndex] = secondTask;
+      newTasks[secondIndex] = firstTask;
+      this.setState({
+        tasks: newTasks
+      });
+    }
+    render() {
+      localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
+      console.log(this.state.tasks);
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "app",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 128,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_NavDefault.default, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 129,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "app__container",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 130,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_ConfigDefault.default, {
+          dragging: this.state.dragging,
+          toggleDragging: this.toggleDragging,
+          removeChecked: this.removeChecked,
+          tasks: this.state.tasks,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 131,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_TasksListDefault.default, {
+          dragging: this.state.dragging,
+          tasks: this.state.tasks,
+          toggleCheck: this.toggleCheck,
+          deleteTask: this.deleteTask,
+          replace: this.replace,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 137,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement(_FormDefault.default, {
+          newTask: this.newTask,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 144,
+            columnNumber: 11
+          }
+        })))
+      );
+    }
+  }
+  exports.default = App;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
