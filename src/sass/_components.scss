@@ -1,0 +1,197 @@
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &__btn {
+    background-color: var(--color-grey-light);
+    border: 1px solid var(--color-grey-dark) !important;
+    width: 4rem;
+    height: 2rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      background-color: var(--color-grey-dark);
+      transition: all 0.2s;
+    }
+
+    &.active {
+      border: 1.5px solid var(--color-grey-very-dark);
+    }
+
+    &.active::before {
+      left: 0;
+      background-color: var(--color-grey-very-dark);
+    }
+
+    &.not-active::before {
+      right: 0;
+    }
+
+    &:hover::before {
+      background-color: var(--color-grey-very-dark);
+    }
+  }
+}
+
+.task {
+  display: flex;
+  align-items: center;
+
+  &.checked {
+    opacity: 0.5;
+  }
+
+  &.dragging &__content {
+    opacity: 0.5;
+    border: 2px dashed var(--color-grey-very-dark) !important;
+  }
+
+  &.draggingover &__content {
+    border: 2px solid var(--color-grey-very-dark) !important;
+
+    & > * {
+      pointer-events: none;
+    }
+  }
+
+  &__drag {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    width: 4rem;
+    cursor: move;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.5s;
+    margin: 0 0.5rem;
+
+    &:hover {
+      background-color: var(--color-grey-very-dark);
+    }
+  }
+
+  &__circle-group {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__circle {
+    width: 1.1rem;
+    height: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--color-grey-dark);
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    gap: 1rem;
+    border: 1px solid var(--color-grey-dark);
+    background-color: var(--color-white);
+  }
+
+  &__complete {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    svg {
+      fill: var(--color-white);
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  &.low &__complete {
+    background-color: var(--color-green);
+
+    &:hover {
+      background-color: var(--color-green-darker);
+    }
+  }
+
+  &.med &__complete {
+    background-color: var(--color-orange);
+
+    &:hover {
+      background-color: var(--color-orange-darker);
+    }
+  }
+
+  &.high &__complete {
+    background-color: var(--color-red);
+
+    &:hover {
+      background-color: var(--color-red-darker);
+    }
+  }
+
+  &.checked &__complete {
+    background-color: var(--color-grey-dark);
+
+    &:hover {
+      background-color: var(--color-grey-very-dark);
+    }
+  }
+
+  &__desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &.checked &__title {
+    text-decoration: line-through;
+  }
+
+  &__title.nextTitle {
+    background-color: var(--color-primary-transparent);
+  }
+
+  &__date {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-grey-dark);
+  }
+
+  &__btns {
+    display: flex;
+  }
+
+  &__btn {
+    background-color: transparent;
+
+    svg {
+      width: 4rem;
+      height: 4rem;
+      transition: all 0.2s;
+      fill: var(--color-grey-dark);
+      transition: all 0.2s;
+
+      &:hover {
+        fill: var(--color-grey-very-dark);
+      }
+    }
+  }
+}
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}

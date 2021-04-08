@@ -1,0 +1,209 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactIconsBs = require('react-icons/bs');
+  var _reactIconsMd = require('react-icons/md');
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\Task.jsx", _s = $RefreshSig$();
+  function Task(props) {
+    _s();
+    const [dragging, setDragging] = _react.useState(false);
+    const [draggingOver, setDraggingOver] = _react.useState(false);
+    const datePriviewOptions = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    const dragStartHandler = e => {
+      setDragging(true);
+    };
+    // const dragEndHandler = e => {};
+    // const dragEnterHandler = e => {};
+    // const dragLeaveHanlder = e => {};
+    // const dragOverHandler = e => {
+    // e.prevetDefault();
+    // };
+    // const dropHandler = e => {
+    // e.prevetDefault();
+    // };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: `task ${props.priority} ${props.checked ? 'checked' : ''} ${dragging ? 'dragging' : ''} ${draggingOver ? 'draggingover' : ''}`,
+        draggable: props.dragging ? 'true' : 'false',
+        onDragStart: dragStartHandler,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30,
+          columnNumber: 5
+        }
+      }, props.dragging ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__drag",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41,
+          columnNumber: 13
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45,
+          columnNumber: 13
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 13
+        }
+      }))) : null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__content",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "task__complete",
+        onClick: () => props.toggleCheck(props.id),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 9
+        }
+      }, props.checked ? /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheckAll, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 28
+        }
+      }) : /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheck, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 42
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__desc",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__title",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 11
+        }
+      }, props.title), props.date ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__date",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64,
+          columnNumber: 13
+        }
+      }, Intl.DateTimeFormat('en-GB', datePriviewOptions).format(new Date(props.date))) : null), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "task__btn btn",
+        onClick: () => props.deleteTask(props.id),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 72,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsMd.MdDelete, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76,
+          columnNumber: 11
+        }
+      }))))
+    );
+  }
+  exports.default = Task;
+  _s(Task, "cfrc15oEgRHNfjFdb8cxXolUHv4=");
+  _c = Task;
+  var _c;
+  $RefreshReg$(_c, "Task");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

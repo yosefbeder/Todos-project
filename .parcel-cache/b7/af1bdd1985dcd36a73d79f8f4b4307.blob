@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos-v2</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app">
+        <div class="nav">
+          <h1 class="header-primary">Todos - v2</h1>
+        </div>
+        <div class="app__container">
+          <div class="configs">
+            <div>Tasks left: 2</div>
+            <button class="configs__btn btn">
+              Remove All Checked Tasks
+              <span>&rarr;</span>
+            </button>
+            <div class="toggle">
+              <button class="toggle__btn btn not-active"></button>
+              <div>Dragging</div>
+            </div>
+          </div>
+          <div class="tasksList">
+            <div class="task high" draggable="true">
+              <div class="task__drag">
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+              </div>
+              <div class="task__content">
+                <button class="task__complete">
+                  <svg>
+                    <use xlink:href="654dc6a25ea67768ed2e678d2c2f0f61"></use>
+                  </svg>
+                </button>
+                <div class="task__desc">
+                  <div class="task__title">Going to the Gym at 3:00pm</div>
+                  <div class="task__date">17th,Mar</div>
+                </div>
+                <div class="task__btns">
+                  <button class="task__btn btn">
+                    <svg>
+                      <use xlink:href="1214ae6894d2696b84d4f225c0f91af7"></use>
+                    </svg></button><button class="task__btn btn">
+                    <svg>
+                      <use xlink:href="7839a6e34b4cc4349d8d29e636aa5f24"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form">
+          <h2 class="form__header header-secondary">Add a new Task</h2>
+          <input type="text" class="form__title" placeholder="Enter The thing that you want to do...">
+
+          <div class="form__select hard">
+            <svg class="form__icon">
+              <use xlink:href="7ccc75ebdb38fc806cc189d0cf8afdaf"></use>
+            </svg>
+            <select>
+              <option value="high">high</option>
+              <option value="med">medium</option>
+              <option value="low">low</option>
+            </select>
+          </div>
+
+          <div class="form__date">
+            <svg class="form__icon">
+              <use xlink:href="81c54a2c4fb0ac203018d161ea9f227f"></use>
+            </svg>
+            <input type="date">
+          </div>
+
+          <button class="form__btn btn form__btn--cancel">
+            <svg>
+              <use xlink:href="b0ad7575418d614847ebd4c0d8b440df"></use>
+            </svg>
+
+            <span>Cancel</span>
+          </button>
+          <button type="submit
+          " class="form__btn btn form__btn--confirm">
+            <svg>
+              <use xlink:href="654dc6a25ea67768ed2e678d2c2f0f61"></use>
+            </svg>
+            <span>Submit</span>
+          </button>
+        </div>
+        <!-- <div class="form__btns">
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- <script src="src/index.js"></script> -->
+  </body>
+</html>
+<script src="202f65accccb6071212b96a1d3c27081"></script>

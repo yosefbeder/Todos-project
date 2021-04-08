@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="8bf3aa0590579dbc0aa7de49988a8c5f">
+    <title>Todos-v2</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app">
+        <div class="nav">
+          <h1 class="header-primary">Todos - v2</h1>
+        </div>
+        <div class="app__container">
+          <div class="configs">
+            <div>Tasks left: 2</div>
+            <div class="toggle">
+              <button class="toggle__btn not-active"></button>
+              <div>Dragging</div>
+            </div>
+          </div>
+          <div class="tasksList">
+            <div class="task" draggable="true">
+              <div class="task__drag">
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+              </div>
+              <div class="task__content">
+                <button class="task__complete">
+                  <svg>
+                    <use xlink:href="3fe27fd586d49b8c157b1f8b77c5477f"></use>
+                  </svg>
+                </button>
+                <div class="task__desc">
+                  <div class="task__title">Going to the Gym at 3:00pm</div>
+                  <div class="task__date">17th,Mar</div>
+                </div>
+                <div class="task__btns">
+                  <button class="task__btn">
+                    <svg>
+                      <use xlink:href="7e96c0f39af7913c2bc97f089536f7f9"></use>
+                    </svg></button><button class="task__btn">
+                    <svg>
+                      <use xlink:href="473c0279f621721751517a3f3e013ebf"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="src/index.js"></script> -->
+  </body>
+</html>

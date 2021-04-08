@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-primary: #078282ff;
+  --color-primary-darker: #0c6b6b;
+  --color-green: #20bf55;
+  --color-green-darker: #139940;
+  --color-orange: #f77f00;
+  --color-orange-darker: #ff7300;
+  --color-red: #ff6347;
+  --color-red-darker: #d8482e;
+  --color-white: #eee;
+  --color-grey-light: #dfdfdf;
+  --color-grey-dark: #8d8d8d;
+  --color-grey-very-dark: #646464;
+  --color-black: #112222;
+  --font-primary: "Roboto", sans-serif;
+}
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  font-size: 1.6rem;
+  font-family: var(--font-primary);
+}
+
+.header-primary {
+  font-weight: 400;
+}
+
+.app {
+  background-color: var(--color-white);
+  max-width: 900px;
+  margin: 3rem auto;
+}
+.app__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.nav {
+  background-color: var(--color-grey-light);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.configs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksList {
+  height: 50rem;
+}

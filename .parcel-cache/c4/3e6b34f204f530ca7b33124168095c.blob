@@ -1,0 +1,193 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactIconsFa = require('react-icons/fa');
+  var _reactIconsBi = require('react-icons/bi');
+  var _reactIconsBs = require('react-icons/bs');
+  var _reactIconsVsc = require('react-icons/vsc');
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\Form.jsx";
+  class Form extends _react.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        title: '',
+        priority: 'high',
+        date: '2021-4-7'
+      };
+      this.changePriority = this.changePriority.bind(this);
+    }
+    submitForm(e) {
+      e.preventDefault();
+    }
+    cancelForm(e) {
+      e.preventDefault();
+    }
+    changePriority(e) {
+      const newPriority = e.target.value;
+      this.setState({
+        priority: newPriority
+      });
+    }
+    render() {
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("form", {
+          className: "form",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 38,
+            columnNumber: 7
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+          className: "form__header header-secondary",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 39,
+            columnNumber: 9
+          }
+        }, "Add a new Task"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          className: "form__title",
+          placeholder: "Enter The thing that you want to do...",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 40,
+            columnNumber: 9
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: `form__select ${this.state.priority}`,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsFa.FaFontAwesomeFlag, {
+          className: "form__icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("select", {
+          value: this.state.priority,
+          onChange: this.changePriority,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("option", {
+          value: "high",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 49,
+            columnNumber: 13
+          }
+        }, "high"), /*#__PURE__*/_reactDefault.default.createElement("option", {
+          value: "med",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 50,
+            columnNumber: 13
+          }
+        }, "medium"), /*#__PURE__*/_reactDefault.default.createElement("option", {
+          value: "low",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 51,
+            columnNumber: 13
+          }
+        }, "low"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "form__date",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 55,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBi.BiCalendarAlt, {
+          className: "form__icon",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 56,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "date",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 57,
+            columnNumber: 11
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          className: "form__btn form__btn--confirm btn",
+          onClick: this.submitForm,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 60,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheck, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 64,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 65,
+            columnNumber: 11
+          }
+        }, "Confirm")), /*#__PURE__*/_reactDefault.default.createElement("button", {
+          className: "form__btn form__btn--cancel btn",
+          onClick: this.cancelForm,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 67,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsVsc.VscClose, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71,
+            columnNumber: 11
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 72,
+            columnNumber: 11
+          }
+        }, "Cancel")))
+      );
+    }
+  }
+  exports.default = Form;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

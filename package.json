@@ -1,0 +1,32 @@
+{
+  "name": "todos-project-v2",
+  "version": "1.0.0",
+  "description": "A second version of todos, but It's made with react and have less features, but better code 😏.",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yosefbeder/todos-project-v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yosefbeder/todos-project-v2/issues"
+  },
+  "homepage": "https://github.com/yosefbeder/todos-project-v2#readme",
+  "dependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "uuidv4": "^6.2.7"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  }
+}

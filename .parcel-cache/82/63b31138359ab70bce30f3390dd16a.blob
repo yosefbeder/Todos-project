@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+:root {
+  --color-primary: #078282ff;
+  --color-primary-darker: #0c6b6b;
+  --color-primary-transparent: #07828255;
+  --color-green: #20bf55;
+  --color-green-darker: #139940;
+  --color-orange: #f77f00;
+  --color-orange-darker: #ff7300;
+  --color-red: #ff6347;
+  --color-red-darker: #d8482e;
+  --color-white: #eee;
+  --color-grey-light: #dfdfdf;
+  --color-grey-dark: #8d8d8d;
+  --color-grey-very-dark: #646464;
+  --color-black: #112222;
+  --font-primary: "Roboto", sans-serif;
+}
+body {
+  background-color: var(--color-primary);
+  color: var(--color-black);
+  font-size: 1.6rem;
+  font-family: var(--font-primary);
+}
+.header-primary {
+  font-weight: 400;
+}
+.header-secondary {
+  font-size: 2.2rem;
+  font-weight: 200;
+}
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.toggle__btn {
+  background-color: var(--color-grey-light);
+  border: 1px solid var(--color-grey-dark) !important;
+  width: 4rem;
+  height: 2rem;
+  position: relative;
+}
+.toggle__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background-color: var(--color-grey-dark);
+  transition: all 0.2s;
+}
+.toggle__btn.active {
+  border: 1.5px solid var(--color-grey-very-dark);
+}
+.toggle__btn.active::before {
+  left: 0;
+  background-color: var(--color-grey-very-dark);
+}
+.toggle__btn.not-active::before {
+  right: 0;
+}
+.toggle__btn:hover::before {
+  background-color: var(--color-grey-very-dark);
+}
+.task {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--color-white);
+}
+.task.checked {
+  opacity: 0.5;
+}
+.task__drag {
+  display: flex;
+  flex-direction: column;
+  height: 5rem;
+  width: 4rem;
+  cursor: move;
+  padding: 0.5rem 0.5rem;
+  transition: all 0.5s;
+}
+.task__drag:hover {
+  background-color: var(--color-grey-light);
+}
+.task__circle-group {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.task__circle {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  background-color: var(--color-grey-dark);
+}
+.task__content {
+  flex: 1;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  gap: 1rem;
+  border: 1px solid var(--color-grey-dark);
+}
+.task__complete {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.task__complete svg {
+  fill: var(--color-white);
+  width: 5rem;
+  height: 5rem;
+}
+.task.low .task__complete {
+  background-color: var(--color-green);
+}
+.task.low .task__complete:hover {
+  background-color: var(--color-green-darker);
+}
+.task.med .task__complete {
+  background-color: var(--color-orange);
+}
+.task.med .task__complete:hover {
+  background-color: var(--color-orange-darker);
+}
+.task.high .task__complete {
+  background-color: var(--color-red);
+}
+.task.high .task__complete:hover {
+  background-color: var(--color-red-darker);
+}
+.task.checked .task__complete {
+  background-color: var(--color-grey-dark);
+}
+.task.checked .task__complete:hover {
+  background-color: var(--color-grey-very-dark);
+}
+.task__desc {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.task__title {
+  font-size: 2rem;
+}
+.task.checked .task__title {
+  text-decoration: line-through;
+}
+.task__title.nextTitle {
+  background-color: var(--color-primary-transparent);
+}
+.task__date {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-grey-dark);
+}
+.task__btns {
+  display: flex;
+}
+.task__btn {
+  background-color: transparent;
+}
+.task__btn svg {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.2s;
+  fill: var(--color-grey-dark);
+  transition: all 0.2s;
+}
+.task__btn svg:hover {
+  fill: var(--color-grey-very-dark);
+}
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.app {
+  background-color: var(--color-white);
+  max-width: 900px;
+  margin: 3rem auto;
+}
+.app__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
+}
+.nav {
+  background-color: var(--color-grey-very-dark);
+  color: var(--color-white);
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+.configs {
+  display: flex;
+  justify-content: space-between;
+}
+.configs__btn {
+  transition: all 0.2s;
+}
+.configs__btn span {
+  transition: all 0.2s;
+}
+.configs__btn:hover {
+  color: var(--color-grey-very-dark);
+}
+.configs__btn:hover span {
+  margin-left: 0.5rem;
+}
+.tasksList {
+  height: 50rem;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-grey-light);
+}
+.form {
+  height: 12rem;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "head  head  head   head" "title title prio   date" "confirm confirm cancel cancel";
+  background-color: var(--color-grey-very-dark);
+  color: var(--color-grey-very-dark);
+  gap: 0.5rem;
+}
+.form input,
+.form select {
+  font-size: 1.6rem;
+  padding: 0 1rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+  font-family: inherit;
+  color: var(--color-grey-very-dark);
+}
+.form input:focus,
+.form select:focus {
+  border: 1px solid var(--color-grey-dark);
+}
+.form__header {
+  grid-area: head;
+  text-align: center;
+  color: var(--color-white);
+}
+.form__title {
+  grid-area: title;
+}
+.form__title::placeholder {
+  color: var(--color-grey-very-dark);
+}
+.form__select {
+  grid-area: prio;
+}
+.form__select select {
+  width: 100%;
+}
+.form__select.high select {
+  background-color: var(--color-red);
+}
+.form__select.high svg {
+  fill: var(--color-red);
+}
+.form__select.med select {
+  background-color: var(--color-orange);
+}
+.form__select.med svg {
+  fill: var(--color-orange);
+}
+.form__select.low select {
+  background-color: var(--color-green);
+}
+.form__select.low svg {
+  fill: var(--color-green);
+}
+.form__date {
+  grid-area: date;
+}
+.form__date, .form__select {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.form__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--color-white);
+}
+.form__btn {
+  background-color: var(--color-grey-dark);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.form__btn svg {
+  fill: var(--color-white);
+  width: 3rem;
+  height: 3rem;
+}
+.form__btn span {
+  font-size: 2rem;
+  font-family: var(--font-primary);
+  font-weight: 200;
+  margin-left: 1rem;
+}
+.form__btn:hover {
+  background-color: var(--color-grey-light);
+  color: var(--color-black);
+}
+.form__btn:hover svg {
+  fill: var(--color-black);
+}
+.form__btn--cancel {
+  grid-area: cancel;
+}
+.form__btn--confirm {
+  grid-area: confirm;
+}
+/*# sourceMappingURL=index.HASH_REF_4b4dac7bc024e44091b1469a1206e35b.css.map */

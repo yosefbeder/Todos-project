@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.HASH_REF_4b4dac7bc024e44091b1469a1206e35b.css">
+    <title>Todos-v2</title>
+  </head>
+  <body>
+    <div id="root">
+      <div class="app">
+        <div class="nav">
+          <h1 class="header-primary">Todos - v2</h1>
+        </div>
+        <div class="app__container">
+          <div class="configs">
+            <div>Tasks left: 2</div>
+            <div class="toggle">
+              <button class="toggle__btn not-active"></button>
+              <div>Dragging</div>
+            </div>
+          </div>
+          <div class="tasksList">
+            <div class="task hight" draggable="true">
+              <div class="task__drag">
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+                <div class="task__circle-group">
+                  <div class="task__circle"></div>
+                  <div class="task__circle"></div>
+                </div>
+              </div>
+              <div class="task__content">
+                <button class="task__complete">
+                  <svg>
+                    <use xlink:href="/symbol-defs.HASH_REF_2398b10abe3d15c768e0d20e3864d1ca.svg"></use>
+                  </svg>
+                </button>
+                <div class="task__desc">
+                  <div class="task__title">Going to the Gym at 3:00pm</div>
+                  <div class="task__date">17th,Mar</div>
+                </div>
+                <div class="task__btns">
+                  <button class="task__btn">
+                    <svg>
+                      <use xlink:href="/symbol-defs.HASH_REF_2398b10abe3d15c768e0d20e3864d1ca.svg"></use>
+                    </svg></button><button class="task__btn">
+                    <svg>
+                      <use xlink:href="/symbol-defs.HASH_REF_2398b10abe3d15c768e0d20e3864d1ca.svg"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="src/index.js"></script> -->
+  </body>
+</html>
+<script src="/index.HASH_REF_1cf92b8ac789bf0c8bd4b6d53ebff041.js"></script>
