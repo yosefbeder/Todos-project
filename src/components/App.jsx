@@ -110,8 +110,6 @@ export default class App extends Component {
     const firstTask = newTasks[firstIndex];
     const secondTask = newTasks[secondIndex];
 
-    console.log(firstTask, secondTask);
-
     newTasks[firstIndex] = secondTask;
     newTasks[secondIndex] = firstTask;
 
@@ -122,8 +120,6 @@ export default class App extends Component {
 
   render() {
     localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
-    console.log(this.state.tasks);
-
     return (
       <div className="app">
         <Nav />

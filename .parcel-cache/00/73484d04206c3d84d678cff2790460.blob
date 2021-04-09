@@ -1,0 +1,85 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\Config.jsx";
+  function Config(props) {
+    // needs tasks state and a function for changing dragging state
+    const unCheckedTasks = props.tasks?.filter?.(t => !t.checked)?.length;
+    const checkedTasks = props.tasks?.filter?.(t => t.checked)?.length;
+    const clickHandler = () => {
+      props.toggleDragging();
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "configs",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 12,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 13,
+          columnNumber: 7
+        }
+      }, "Tasks left: ", unCheckedTasks), unCheckedTasks ? /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "configs__btn btn",
+        onClick: props.removeChecked,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 9
+        }
+      }, "Remove All Checked Tasks", /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18,
+          columnNumber: 11
+        }
+      }, "→")) : null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "toggle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: `toggle__btn btn ${props.dragging ? 'active' : 'not-active'}`,
+        onClick: clickHandler,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29,
+          columnNumber: 9
+        }
+      }, "Dragging")))
+    );
+  }
+  exports.default = Config;
+  _c = Config;
+  var _c;
+  $RefreshReg$(_c, "Config");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
