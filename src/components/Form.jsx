@@ -21,12 +21,21 @@ export default class Form extends Component {
     this.changeDate = this.changeDate.bind(this);
   }
 
+  componentDidMount() {
+    this.inputTitle.focus();
+  }
+
+  shouldComponentUpdate(_, nextState) {
+    return nextState !== this.state;
+  }
+
   resetForm() {
     this.setState({
       title: '',
       priority: 'low',
       date: this.htmlify(new Date()),
     });
+    this.inputTitle.focus();
   }
 
   submitForm(e) {
@@ -40,6 +49,7 @@ export default class Form extends Component {
       this.resetForm();
     } else {
       alert('Enter a title for your task or quit using the app 😡😡😡💢💢💢');
+      this.inputTitle.focus();
     }
   }
 
@@ -86,6 +96,9 @@ export default class Form extends Component {
           placeholder="Enter The thing that you want to do..."
           value={this.state.title}
           onChange={this.changeTitle}
+          ref={el => {
+            this.inputTitle = el;
+          }}
         />
 
         <div className={`form__select ${this.state.priority}`}>

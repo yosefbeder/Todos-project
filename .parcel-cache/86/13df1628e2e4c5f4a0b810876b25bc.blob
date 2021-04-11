@@ -1,0 +1,226 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactIconsBs = require('react-icons/bs');
+  var _reactIconsMd = require('react-icons/md');
+  var _contextsTaskContext = require('../contexts/task-context');
+  var _contextsTaskContextDefault = _parcelHelpers.interopDefault(_contextsTaskContext);
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\Task.jsx", _s = $RefreshSig$();
+  function Task(props) {
+    _s();
+    const [dragging, setDragging] = _react.useState(false);
+    const [draggingOver, setDraggingOver] = _react.useState(false);
+    const context = _react.useContext(_contextsTaskContextDefault.default);
+    const datePriviewOptions = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    const dragStartHandler = e => {
+      setDragging(true);
+      e.dataTransfer.setData('text/plain', props.id);
+    };
+    const dragEndHandler = () => {
+      setDragging(false);
+    };
+    const dragEnterHandler = () => {
+      setDraggingOver(true);
+    };
+    const dragLeaveHanlder = () => {
+      setDraggingOver(false);
+    };
+    const dragOverHandler = e => {
+      e.preventDefault();
+    };
+    const dropHandler = e => {
+      e.preventDefault();
+      setDraggingOver(false);
+      context.replace(e.dataTransfer.getData('text/plain'), props.id);
+    };
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: `task ${props.priority} ${props.checked ? 'checked' : ''} ${dragging ? 'dragging' : ''} ${draggingOver ? 'draggingover' : ''}`,
+        draggable: context.dragging ? 'true' : 'false',
+        onDragStart: dragStartHandler,
+        onDragEnd: dragEndHandler,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42,
+          columnNumber: 5
+        }
+      }, context.dragging ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__drag",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54,
+          columnNumber: 13
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 13
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle-group",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60,
+          columnNumber: 11
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 13
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__circle",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62,
+          columnNumber: 13
+        }
+      }))) : null, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__content",
+        onDragEnter: dragEnterHandler,
+        onDragLeave: dragLeaveHanlder,
+        onDragOver: dragOverHandler,
+        onDrop: dropHandler,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "task__complete",
+        onClick: () => context.toggleCheck(props.id),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74,
+          columnNumber: 9
+        }
+      }, props.checked ? /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheckAll, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 28
+        }
+      }) : /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheck, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78,
+          columnNumber: 42
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__desc",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__title",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81,
+          columnNumber: 11
+        }
+      }, props.title), props.date ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "task__date",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83,
+          columnNumber: 13
+        }
+      }, Intl.DateTimeFormat('en-GB', datePriviewOptions).format(new Date(props.date))) : null), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "task__btn btn",
+        onClick: () => context.deleteTask(props.id),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsMd.MdDelete, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 11
+        }
+      }))))
+    );
+  }
+  exports.default = Task;
+  _s(Task, "v0MQ2dqoCxHwtv5un3nUYUzZHiE=");
+  _c = Task;
+  var _c;
+  $RefreshReg$(_c, "Task");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

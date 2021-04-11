@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef, useContext } from 'react';
 import { BsCheck as Check, BsCheckAll as Checked } from 'react-icons/bs';
 import { MdDelete as Delete } from 'react-icons/md';
+import TaskContext from '../contexts/task-context';
 
 export default function Task(props) {
   const [dragging, setDragging] = useState(false);
   const [draggingOver, setDraggingOver] = useState(false);
+
+  const context = useContext(TaskContext);
 
   const datePriviewOptions = {
     weekday: 'long',
@@ -32,7 +35,7 @@ export default function Task(props) {
   const dropHandler = e => {
     e.preventDefault();
     setDraggingOver(false);
-    props.replace(e.dataTransfer.getData('text/plain'), props.id);
+    context.replace(e.dataTransfer.getData('text/plain'), props.id);
   };
 
   return (
@@ -40,11 +43,11 @@ export default function Task(props) {
       className={`task ${props.priority} ${props.checked ? 'checked' : ''} ${
         dragging ? 'dragging' : ''
       } ${draggingOver ? 'draggingover' : ''}`}
-      draggable={props.dragging ? 'true' : 'false'}
+      draggable={context.dragging ? 'true' : 'false'}
       onDragStart={dragStartHandler}
       onDragEnd={dragEndHandler}
     >
-      {props.dragging ? (
+      {context.dragging ? (
         <div className="task__drag">
           <div className="task__circle-group">
             <div className="task__circle"></div>
@@ -70,7 +73,7 @@ export default function Task(props) {
       >
         <button
           className="task__complete"
-          onClick={() => props.toggleCheck(props.id)}
+          onClick={() => context.toggleCheck(props.id)}
         >
           {props.checked ? <Checked /> : <Check />}
         </button>
@@ -87,7 +90,7 @@ export default function Task(props) {
 
         <button
           className="task__btn btn"
-          onClick={() => props.deleteTask(props.id)}
+          onClick={() => context.deleteTask(props.id)}
         >
           <Delete />
         </button>
