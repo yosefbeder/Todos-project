@@ -1,0 +1,34 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  require('react-icons/fa');
+  require('react-icons/bi');
+  require('react-icons/bs');
+  require('react-icons/vsc');
+  var _s = $RefreshSig$();
+  exports.default = _c2 = /*#__PURE__*/_reactDefault.default.memo(_c = _s(function Form(props) {
+    _s();
+    // State
+    const [title, setTitle] = _react.useState('');
+    const [priority, setPriority] = _react.useState('low');
+    const [date, setDate] = _react.useState(htmlify(new Date()));
+    // useEffects
+    // Functions
+    function htmlify(date) {
+      return date.toISOString().slice(0, 10);
+    }
+  }, "XGSw+FauW6P3GaBBVxFJfNa95q4="));
+  var _c, _c2;
+  $RefreshReg$(_c, "%default%$React.memo");
+  $RefreshReg$(_c2, "%default%");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

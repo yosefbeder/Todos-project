@@ -38,7 +38,7 @@
 72C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\package-lock.json132623794766823953 0
 106C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-normalize-unicode\CHANGELOG.md121436361000000000 0
 96C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\whatwg-url\lib\public-api.js121436361000000000 0
-59C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist132626278829654414 1
+59C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist132627163437281550 1
 90C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-modules-values132623795384207000 1
 120C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\regenerate-unicode-properties\Script\Syloti_Nagri.js121436361000000000 0
 87C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\lodash\fp\nthArg.js121436361000000000 0
@@ -106,7 +106,7 @@
 93C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\unbox-primitive\.eslintrc121436361000000000 0
 67C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules132623795434061965 1
 137C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-reduce-initial\node_modules\chalk\node_modules\supports-color132623795389163406 1
-64C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\README.md132626154967572125 0
+64C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\README.md132627164467611421 0
 109C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\color\node_modules\color-convert\index.js121436361000000000 0
 77C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\sshpk\man132623795201432164 1
 129C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\@babel\helper-define-polyfill-provider\lib\define-provider.js121436361000000000 0
@@ -141,7 +141,7 @@
 113C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\regenerate-unicode-properties\Script\Oriya.js121436361000000000 0
 113C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\resolve\test\resolver\same_names\foo\index.js121436361000000000 0
 124C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-modules-local-by-default\node_modules\color-name132623795393096417 1
-77C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\src\containers\App.jsx132625525963495643 0
+77C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\src\containers\App.jsx132627161969413641 0
 118C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-modules\node_modules\ansi-styles\readme.md131628273600000000 0
 106C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\dist\unpacker\browsers.js121436361000000000 0
 87C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\parse-asn1\index.js121436361000000000 0
@@ -292,7 +292,7 @@
 90C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\uuidv4\.releaserc.json121436361000000000 0
 118C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-reduce-initial\node_modules\chalk\index.js121436361000000000 0
 111C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\@parcel\fs-search\fs-search.darwin-x64.node121436361000000000 0
-78C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\src\components\Form.jsx132625480771334124 0
+78C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\src\components\Form.jsx132627163434161220 0
 101C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\uuidv4\node_modules\.bin\uuid.cmd132623795421851562 0
 93C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\timers-browserify\main.js121436361000000000 0
 107C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\core-js\stable\function\has-instance.js121436361000000000 0
@@ -2812,7 +2812,7 @@
 106C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\url\node_modules\querystring\decode.js130069921000000000 0
 108C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\@nodelib\fs.walk\out\readers\common.d.ts121436361000000000 0
 74C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\terser132623795377113521 1
-82C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.1206e35b.css.map132626278828851760 0
+82C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.1206e35b.css.map132627163436900284 0
 93C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\requires-port\.travis.yml130906897020000000 0
 87C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\lru-cache\README.md121436361000000000 0
 85C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\timers-browserify132623795376842625 1
@@ -6240,7 +6240,7 @@
 124C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\core-js\modules\es.object.get-own-property-descriptor.js121436361000000000 0
 99C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\serve-handler\src\glob-slash.js121436361000000000 0
 94C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\serve-handler\src\index.js121436361000000000 0
-70C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.html132626278828711293 0
+70C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.html132627163436840081 0
 115C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\cssstyle\lib\properties\webkitBorderEndColor.js121436361000000000 0
 129C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\postcss-unique-selectors\node_modules\color-name\package.json132623795388621590 0
 93C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\lodash\fp\flattenDepth.js121436361000000000 0
@@ -18788,7 +18788,7 @@
 112C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\data\features\array-includes.js121436361000000000 0
 113C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\data\features\arrow-functions.js121436361000000000 0
 107C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\data\features\audio-api.js121436361000000000 0
-77C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.3fafb3e2.js132626278829453747 0
+77C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.3fafb3e2.js132627163437221361 0
 103C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\data\features\audio.js121436361000000000 0
 105C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\@babel\plugin-transform-function-name132623795375387815 1
 106C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\caniuse-lite\data\features\auxclick.js121436361000000000 0
@@ -21809,5 +21809,5 @@
 81C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\.bin\uuid.ps1132623795421821469 0
 82C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\.bin\which.cmd132623795421941871 0
 82C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\node_modules\.bin\which.ps1132623795421941871 0
-78C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.1206e35b.css132626278828731414 0
-81C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.3fafb3e2.js.map132626278829624313 0
+78C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.1206e35b.css132627163436840081 0
+81C:\Users\mosta\Desktop\Yosef Projects\todos-project-v2\dist\index.3fafb3e2.js.map132627163437271526 0

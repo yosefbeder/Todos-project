@@ -1,139 +1,104 @@
-import React, { Component } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaFontAwesomeFlag as Flag } from 'react-icons/fa';
 import { BiCalendarAlt as Calendar } from 'react-icons/bi';
 import { BsCheck as SubmitIcon } from 'react-icons/bs';
 import { VscClose as CancelIcon } from 'react-icons/vsc';
 
-export default class Form extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      title: '',
-      priority: 'low',
-      date: this.htmlify(new Date()),
-      // default date (today)
-    };
-    this.resetForm = this.resetForm.bind(this);
-    this.submitForm = this.submitForm.bind(this);
-    this.cancelForm = this.cancelForm.bind(this);
-    this.changeTitle = this.changeTitle.bind(this);
-    this.changePriority = this.changePriority.bind(this);
-    this.changeDate = this.changeDate.bind(this);
-  }
+export default React.memo(function Form(props) {
+  // State & and Refs
 
-  componentDidMount() {
-    this.inputTitle.focus();
-  }
+  const [title, setTitle] = useState('');
+  const [priority, setPriority] = useState('low');
+  const [date, setDate] = useState(htmlify(new Date()));
 
-  shouldComponentUpdate(_, nextState) {
-    return nextState !== this.state;
-  }
+  const inputTitle = useRef(null);
 
-  resetForm() {
-    this.setState({
-      title: '',
-      priority: 'low',
-      date: this.htmlify(new Date()),
-    });
-    this.inputTitle.focus();
-  }
+  // useEffects
 
-  submitForm(e) {
-    e.preventDefault();
-    if (this.state.title) {
-      this.props.newTask(
-        this.state.priority,
-        this.state.title,
-        this.state.date,
-      );
-      this.resetForm();
-    } else {
-      alert('Enter a title for your task or quit using the app 😡😡😡💢💢💢');
-      this.inputTitle.focus();
-    }
-  }
+  useEffect(() => {
+    inputTitle.current.focus();
+  }, []);
 
-  cancelForm(e) {
-    e.preventDefault();
-    this.resetForm();
-  }
+  // Functions
 
-  changeTitle(e) {
-    const newTitle = e.target.value;
-
-    this.setState({
-      title: newTitle,
-    });
-  }
-
-  changePriority(e) {
-    const newPriority = e.target.value;
-
-    this.setState({
-      priority: newPriority,
-    });
-  }
-
-  changeDate(e) {
-    const newDate = e.target.value;
-
-    this.setState({
-      date: newDate,
-    });
-  }
-
-  htmlify(date) {
+  function htmlify(date) {
     return date.toISOString().slice(0, 10);
   }
 
-  render() {
-    return (
-      <form className="form">
-        <h2 className="form__header header-secondary">Add a new Task</h2>
-        <input
-          type="text"
-          className="form__title"
-          placeholder="Enter The thing that you want to do..."
-          value={this.state.title}
-          onChange={this.changeTitle}
-          ref={el => {
-            this.inputTitle = el;
-          }}
-        />
+  const resetForm = function () {
+    setTitle('');
+    setPriority('low');
+    setDate(htmlify(new Date()));
 
-        <div className={`form__select ${this.state.priority}`}>
-          <Flag className="form__icon" />
-          <select value={this.state.priority} onChange={this.changePriority}>
-            <option value="high">high</option>
-            <option value="med">medium</option>
-            <option value="low">low</option>
-          </select>
-        </div>
+    inputTitle.current.focus();
+  };
 
-        <div className="form__date">
-          <Calendar className="form__icon" />
-          <input
-            type="date"
-            value={this.state.date}
-            onChange={this.changeDate}
-          />
-        </div>
+  const submitForm = function (e) {
+    e.preventDefault();
+    if (title) {
+      props.newTask(priority, title, date);
+      resetForm();
+    } else {
+      alert('Enter a title for your task or quit using the app 😡😡😡💢💢💢');
+      inputTitle.current.focus();
+    }
+  };
 
-        <button
-          className="form__btn form__btn--confirm btn"
-          onClick={this.submitForm}
-        >
-          <SubmitIcon />
-          <span>Confirm</span>
-        </button>
-        <button
-          className="form__btn form__btn--cancel btn"
-          onClick={this.cancelForm}
-        >
-          <CancelIcon />
-          <span>Cancel</span>
-        </button>
-      </form>
-    );
-  }
-}
+  const cancelForm = function (e) {
+    e.preventDefault();
+    resetForm();
+  };
+
+  // changeEvent dealing functions
+
+  onTitleChange = function (e) {
+    setTitle(e.target.value);
+  };
+
+  onPriorityChange = function (e) {
+    setPriority(e.target.value);
+  };
+
+  onDateChange = function (e) {
+    setDate(e.target.value);
+  };
+
+  // JSX
+
+  return (
+    <form className="form">
+      <h2 className="form__header header-secondary">Add a new Task</h2>
+      <input
+        type="text"
+        className="form__title"
+        placeholder="Enter The thing that you want to do..."
+        value={title}
+        onChange={onTitleChange}
+        ref={inputTitle}
+      />
+
+      <div className={`form__select ${priority}`}>
+        <Flag className="form__icon" />
+        <select value={priority} onChange={onPriorityChange}>
+          <option value="high">high</option>
+          <option value="med">medium</option>
+          <option value="low">low</option>
+        </select>
+      </div>
+
+      <div className="form__date">
+        <Calendar className="form__icon" />
+        <input type="date" value={date} onChange={onDateChange} />
+      </div>
+
+      <button className="form__btn form__btn--confirm btn" onClick={submitForm}>
+        <SubmitIcon />
+        <span>Confirm</span>
+      </button>
+      <button className="form__btn form__btn--cancel btn" onClick={cancelForm}>
+        <CancelIcon />
+        <span>Cancel</span>
+      </button>
+    </form>
+  );
+});

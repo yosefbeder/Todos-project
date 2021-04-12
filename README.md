@@ -14,14 +14,14 @@ A second version of todos, but It's made with react and have less features, but 
 
 ---
 
-| Name     | Type        | State |
-| -------- | ----------- | ----- |
-| App      | class-based | [x]   |
-| Nav      | functional  | [ ]   |
-| Config   | functional  | [ ]   |
-| TaskList | functional  | [ ]   |
-| Task     | functional  | [x]   |
-| Form     | class-based | [x]   |
+| Name     | State |
+| -------- | ----- |
+| App      | [x]   |
+| Nav      | []    |
+| Config   | []    |
+| TaskList | []    |
+| Task     | [x]   |
+| Form     | [x]   |
 
 ## Features
 
@@ -29,8 +29,7 @@ A second version of todos, but It's made with react and have less features, but 
 
 ### React
 
-- I used all of React posible **Hooks** useState, useEffect, useRef.
-- I also used **conditional rendering**, **shouldComponentUpdate**, and **context api**.
+- This app is made fully with React hooks.
 
 ### Others
 

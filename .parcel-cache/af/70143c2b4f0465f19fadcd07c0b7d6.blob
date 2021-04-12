@@ -1,0 +1,222 @@
+var helpers = require("../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactIconsFa = require('react-icons/fa');
+  var _reactIconsBi = require('react-icons/bi');
+  var _reactIconsBs = require('react-icons/bs');
+  var _reactIconsVsc = require('react-icons/vsc');
+  var _jsxFileName = "C:\\Users\\mosta\\Desktop\\Yosef Projects\\todos-project-v2\\src\\components\\Form.jsx", _s = $RefreshSig$();
+  exports.default = _c2 = /*#__PURE__*/_reactDefault.default.memo(_c = _s(function Form(props) {
+    _s();
+    // State & and Refs
+    const [title, setTitle] = _react.useState('');
+    const [priority, setPriority] = _react.useState('low');
+    const [date, setDate] = _react.useState(htmlify(new Date()));
+    const inputTitle = _react.useRef(null);
+    // useEffects
+    _react.useEffect(() => {
+      inputTitle.current.focus();
+    }, []);
+    // Functions
+    function htmlify(date) {
+      return date.toISOString().slice(0, 10);
+    }
+    const resetForm = function () {
+      setTitle('');
+      setPriority('low');
+      setDate(htmlify(new Date()));
+      inputTitle.current.focus();
+    };
+    const submitForm = function (e) {
+      e.preventDefault();
+      if (title) {
+        props.newTask(priority, title, date);
+        resetForm();
+      } else {
+        alert('Enter a title for your task or quit using the app 😡😡😡💢💢💢');
+        inputTitle.focus();
+      }
+    };
+    const cancelForm = function (e) {
+      e.preventDefault();
+      resetForm();
+    };
+    // changeEvent dealing functions
+    onTitleChange = function (e) {
+      setTitle(e.target.value);
+    };
+    onPriorityChange = function (e) {
+      setPriority(e.target.value);
+    };
+    onDateChange = function (e) {
+      setDate(e.target.value);
+    };
+    // JSX
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("form", {
+        className: "form",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69,
+          columnNumber: 5
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h2", {
+        className: "form__header header-secondary",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70,
+          columnNumber: 7
+        }
+      }, "Add a new Task"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "text",
+        className: "form__title",
+        placeholder: "Enter The thing that you want to do...",
+        value: title,
+        onChange: onTitleChange,
+        ref: inputTitle,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71,
+          columnNumber: 7
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: `form__select ${priority}`,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 80,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsFa.FaFontAwesomeFlag, {
+        className: "form__icon",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("select", {
+        value: priority,
+        onChange: onPriorityChange,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("option", {
+        value: "high",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83,
+          columnNumber: 11
+        }
+      }, "high"), /*#__PURE__*/_reactDefault.default.createElement("option", {
+        value: "med",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84,
+          columnNumber: 11
+        }
+      }, "medium"), /*#__PURE__*/_reactDefault.default.createElement("option", {
+        value: "low",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 11
+        }
+      }, "low"))), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        className: "form__date",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBi.BiCalendarAlt, {
+        className: "form__icon",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "date",
+        value: date,
+        onChange: onDateChange,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 91,
+          columnNumber: 9
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "form__btn form__btn--confirm btn",
+        onClick: submitForm,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsBs.BsCheck, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96,
+          columnNumber: 9
+        }
+      }, "Confirm")), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        className: "form__btn form__btn--cancel btn",
+        onClick: cancelForm,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98,
+          columnNumber: 7
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactIconsVsc.VscClose, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 9
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100,
+          columnNumber: 9
+        }
+      }, "Cancel")))
+    );
+  }, "esFeoMtY7Flu3jXi01HDNaGR1kg="));
+  var _c, _c2;
+  $RefreshReg$(_c, "%default%$React.memo");
+  $RefreshReg$(_c2, "%default%");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
